@@ -1,0 +1,11 @@
+FROM ryandotclair/python
+MAINTAINER Ryan Clair <ryan.clair@emc.com>
+LABEL Description="This is the collector script for SRDFA_Reporter app"
+LABEL Version="1.0"
+WORKDIR /app
+COPY ./Collector.py /app/collector.py
+COPY ./crontab /etc/cron.d/collector-cron
+RUN pip3 install requests
+RUN pip3 install pg8000
+RUN chmod a+x /app/collector.py
+ENTRYPOINT python3 ./collector.py
