@@ -2,7 +2,15 @@ FROM alpine:3.2
 MAINTAINER Ryan Clair <ryan.clair@emc.com>
 LABEL Description="This is a minimum Python3 image"
 LABEL Version="3.4"
+<<<<<<< Updated upstream
 RUN apk --update add python3 && rm -f /var/cache/apk/* \
     && pip3 install --upgrade pip \
     && pip3 install --upgrade setuptools
+=======
+RUN apk --update add python3 && \
+    rm -f /var/cache/apk/* && \
+    pip3 install --upgrade pip && \
+    pip3 install --upgrade setuptools && \
+    mkdir /app
+>>>>>>> Stashed changes
 ENTRYPOINT /bin/bash
