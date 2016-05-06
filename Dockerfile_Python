@@ -1,5 +1,5 @@
 FROM alpine:3.2
-MAINTAINER Ryan Clair <ryan.clair@emc.com>
+MAINTAINER Ryan Clair <ryan.clair@gmail.com>
 LABEL Description="This is a minimum Python3 image"
 LABEL Version="3.4"
 RUN apk --update add python3 && rm -f /var/cache/apk/* \
