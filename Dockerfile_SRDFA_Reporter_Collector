@@ -1,4 +1,4 @@
-FROM ryandotclair/python
+FROM ryandotclair/python:3.4
 MAINTAINER Ryan Clair <ryan.clair@gmail.com>
 LABEL Description="This is the collector script for SRDFA_Reporter app"
 LABEL Version="1.0"
